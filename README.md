@@ -194,7 +194,7 @@ This README is originated from `init.org` that is generated using `M-x org-gfm-e
 
     ```bash
     cd ~
-    git clone --recurse-submodules -j8 https://github.com/MatthewZMD/.emacs.d.git
+    git clone --recurse-submodules -j8 https://github.com/lanyusan/memacs.git
     cd .emacs.d
     ```
 3.  Ensure a stable connection to Melpa Packages, then open Emacs.

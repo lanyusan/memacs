@@ -6,7 +6,7 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Fri Mar 15 11:03:43 2019 (-0400)
 ;; Version: 2.0.0
-;; Last-Updated: Tue Dec 24 12:03:28 2019 (-0500)
+;; Last-Updated: Thu Jun  4 16:29:46 2020 (+0800)
 ;;           By: Mingde (Matthew) Zeng
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d web-mode js2-mode typescript-mode emmet instant-rename-tag json-mode
@@ -55,7 +55,7 @@
 
 ;; TypeScriptPac
 (use-package typescript-mode
-  :mode "\\.ts\\'"
+  :mode "\\.ts[x]\\'"
   :commands (typescript-mode))
 ;; -TypeScriptPac
 

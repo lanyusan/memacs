@@ -83,7 +83,7 @@
 
 ;; DisTimeBat
 (display-time-mode 1)
-(display-battery-mode 1)
+;;(display-battery-mode 1)
 ;; -DisTimeBat
 
 (provide 'init-ui-config)

@@ -6,7 +6,7 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Thu Mar 14 10:15:28 2019 (-0400)
 ;; Version: 2.0.0
-;; Last-Updated: Thu Mar 12 17:03:46 2020 (-0400)
+;; Last-Updated: Thu Jun  4 16:31:03 2020 (+0800)
 ;;           By: Mingde (Matthew) Zeng
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d init
@@ -190,7 +190,7 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-cc)
 
-(require 'init-python)
+;; (require 'init-python)
 
 (require 'init-haskell)
 
@@ -204,27 +204,27 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 (require 'init-webdev)
 
 ;; Miscellaneous
-(require 'init-org)
+;; (require 'init-org)
 
-(require 'init-eaf)
+;; (require 'init-eaf)
 
-(require 'init-erc)
+;; (require 'init-erc)
 
-(require 'init-eww)
+;; (require 'init-eww)
 
-(require 'init-mu4e)
+;; (require 'init-mu4e)
 
-(require 'init-tramp)
+;; (require 'init-tramp)
 
 (require 'init-pdf)
 
-(require 'init-leetcode)
+;; (require 'init-leetcode)
 
 (require 'init-pyim)
 
-(require 'init-epaint)
+;; (require 'init-epaint)
 
-(require 'init-games)
+;; (require 'init-games)
 
 (require 'init-zone)
 
