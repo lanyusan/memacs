@@ -6,8 +6,8 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Thu Mar 14 10:15:28 2019 (-0400)
 ;; Version: 2.0.0
-;; Last-Updated: Thu Jun  4 16:31:03 2020 (+0800)
-;;           By: Mingde (Matthew) Zeng
+;; Last-Updated: Thu Jun  4 16:40:41 2020 (+0800)
+;;           By: fqye
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d init
 ;; Compatibility: emacs-version >= 26.1
@@ -203,6 +203,9 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 ;; Web Development
 (require 'init-webdev)
 
+;; fsharp
+(require 'init-fsharp)
+
 ;; Miscellaneous
 ;; (require 'init-org)
 
@@ -227,6 +230,8 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 ;; (require 'init-games)
 
 (require 'init-zone)
+
+
 
 (provide 'init)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -6,8 +6,8 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Fri Mar 15 10:42:09 2019 (-0400)
 ;; Version: 2.0.0
-;; Last-Updated: Mon Apr 27 09:40:49 2020 (-0400)
-;;           By: Mingde (Matthew) Zeng
+;; Last-Updated: Thu Jun  4 16:52:54 2020 (+0800)
+;;           By: fqye
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d lsp
 ;; Compatibility: emacs-version >= 26.1
@@ -52,8 +52,9 @@
   (lsp-eldoc-hook nil)
   :bind (:map lsp-mode-map ("C-c C-f" . lsp-format-buffer))
   :hook ((java-mode python-mode go-mode
-          js-mode js2-mode typescript-mode web-mode
-          c-mode c++-mode objc-mode) . lsp))
+                    js-mode js2-mode typescript-mode web-mode
+                    fsharp-mode
+                    c-mode c++-mode objc-mode) . lsp))
 ;; -LSPPac
 
 ;; LSPUI
