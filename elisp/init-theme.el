@@ -6,8 +6,8 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Thu Mar 14 17:11:56 2019 (-0400)
 ;; Version: 2.0.0
-;; Last-Updated: Mon Jan  6 14:32:34 2020 (-0500)
-;;           By: Mingde (Matthew) Zeng
+;; Last-Updated: Thu Jun  4 19:49:42 2020 (+0800)
+;;           By: fqye
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d doom-themes doom-modeline
 ;; Compatibility: emacs-version >= 26.1
@@ -40,6 +40,27 @@
 
 (eval-when-compile
   (require 'init-const))
+
+;; (use-package poet-theme
+;;   :ensure t
+;;   :config
+;;   (load-theme 'poet-dark t)
+;;   ;; or
+;;   ;; (load-theme 'apropospriate-light t)
+;;   )
+
+;; (use-package color-identifiers-mode
+;;     :diminish (color-identifiers-mode . "≡ ")
+;;     :bind (("C-c hi" . color-identifiers-mode))
+;;     :ensure t
+;;     :defer t
+;;     :config
+
+;;     (add-to-list
+;;      'color-identifiers:modes-alist
+;;      `(rjsx-mode . ("[^.][[:space:]]*"
+;;                       "\\_<\\([a-zA-Z_$]\\(?:\\s_\\|\\sw\\)*\\)"
+;;                       (nil font-lock-variable-name-face js2-function-param)))))
 
 ;; DoomThemes
 (use-package doom-themes

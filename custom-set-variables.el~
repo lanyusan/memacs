@@ -38,7 +38,7 @@
  '(load-prefer-newer t)
  '(multi-term-program "/bin/bash" t)
  '(package-selected-packages
-   '(fsharp-mode ibuffer-vc disk-usage term-keys shell-here ace-window discover-my-major undo-tree popup-kill-ring which-key avy crux exec-path-from-shell find-file-in-project counsel amx ivy sudo-edit diminish use-package auto-package-update))
+   '(color-identifiers-mode tao-theme pyim pdf-tools fsharp-mode emmet-mode typescript-mode js2-mode web-mode groovy-mode dockerfile-mode docker org-edit-latex yasnippet-snippets which-key use-package undo-tree treemacs-projectile treemacs-magit term-keys sudo-edit smartparens shell-here quickrun popup-kill-ring modern-cpp-font-lock lsp-ui lsp-java iedit ibuffer-vc highlight-indent-guides haskell-mode go-mode format-all flycheck-posframe flycheck-grammarly find-file-in-project exec-path-from-shell evil-nerd-commenter ess dumb-jump doom-themes doom-modeline disk-usage discover-my-major diminish dashboard dap-mode crux counsel company-tabnine company-lsp company-box ccls auto-package-update auctex amx))
  '(recentf-auto-cleanup "05:00am")
  '(recentf-exclude
    '((expand-file-name package-user-dir)
