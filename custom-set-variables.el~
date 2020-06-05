@@ -38,7 +38,7 @@
  '(load-prefer-newer t)
  '(multi-term-program "/bin/bash" t)
  '(package-selected-packages
-   '(fsharp-mode ibuffer-vc disk-usage term-keys shell-here ace-window discover-my-major undo-tree popup-kill-ring which-key avy crux exec-path-from-shell find-file-in-project counsel amx ivy sudo-edit diminish use-package auto-package-update))
+   '(prettier-js eglot-fsharp fsharp-mode ibuffer-vc disk-usage term-keys shell-here ace-window discover-my-major undo-tree popup-kill-ring which-key avy crux exec-path-from-shell find-file-in-project counsel amx ivy sudo-edit diminish use-package auto-package-update))
  '(recentf-auto-cleanup "05:00am")
  '(recentf-exclude
    '((expand-file-name package-user-dir)

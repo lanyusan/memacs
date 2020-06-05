@@ -6,8 +6,8 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Fri Mar 15 11:03:43 2019 (-0400)
 ;; Version: 2.0.0
-;; Last-Updated: Thu Jun  4 16:29:46 2020 (+0800)
-;;           By: Mingde (Matthew) Zeng
+;; Last-Updated: Fri Jun  5 14:52:31 2020 (+0800)
+;;           By: fqye
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d web-mode js2-mode typescript-mode emmet instant-rename-tag json-mode
 ;; Compatibility: emacs-version >= 26.1
@@ -52,6 +52,13 @@
   :mode "\\.js\\'"
   :interpreter "node")
 ;; -Js2Pac
+
+(use-package prettier-js
+  :diminish
+  :bind ("C-c C-p" . prettier-js)
+  :hook ((js-mode js2-mode json-mode web-mode css-mode sgml-mode html-mode typescript-mode)
+         .
+         prettier-js-mode))
 
 ;; TypeScriptPac
 (use-package typescript-mode
