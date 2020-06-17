@@ -6,7 +6,7 @@
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Wed Sep  4 16:35:00 2019 (-0400)
 ;; Version: 2.0.0
-;; Last-Updated: Tue Dec 24 12:00:08 2019 (-0500)
+;; Last-Updated: Sun Jun 14 22:10:23 2020 (-0400)
 ;;           By: Mingde (Matthew) Zeng
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d auctex
@@ -68,11 +68,13 @@
     (add-hook LaTeX-mode-hook #'display-line-numbers-mode)))
 ;; -AUCTeXPac
 
-;; OrgLatexPac
-(use-package org-edit-latex
-  :defer t
-  :after org)
-;; -OrgLatexPac
+;; OrgLatexInstantPreviewPac
+(use-package org-latex-instant-preview
+  :load-path (lambda () (expand-file-name "site-elisp/org-latex-instant-preview" user-emacs-directory))
+  :after org
+  :custom (org-latex-instant-preview-tex2svg-bin "/usr/bin/tex2svg") ;; Prerequisite
+  :hook (org-mode . org-latex-instant-preview-mode))
+;; -OrgLatexInstantPreviewPac
 
 (provide 'init-latex)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
