@@ -1,12 +1,12 @@
-;;; init-pyim.el --- -*- lexical-binding: t -*-
+;;; init-input-method.el --- -*- lexical-binding: t -*-
 ;;
-;; Filename: init-pyim.el
+;; Filename: init-input-method.el
 ;; Description: Initialize Pyim
 ;; Author: Mingde (Matthew) Zeng
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Thu Jun 20 00:36:05 2019 (-0400)
 ;; Version: 2.0.0
-;; Last-Updated: Thu Dec 26 21:54:20 2019 (-0500)
+;; Last-Updated: Sun Jun 21 00:52:39 2020 (-0400)
 ;;           By: Mingde (Matthew) Zeng
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d init
@@ -37,6 +37,9 @@
 ;;
 ;;; Code:
 
+(eval-when-compile
+  (require 'init-const))
+
 ;; PyimPac
 (use-package pyim
   :init
@@ -64,6 +67,6 @@
   :config (pyim-basedict-enable))
 ;; -PyimBaseDictPac
 
-(provide 'init-pyim)
+(provide 'init-input-method)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; init-pyim.el ends here
+;;; init-input-method.el ends here
