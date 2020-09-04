@@ -5,9 +5,7 @@
 ;; Author: Mingde (Matthew) Zeng
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Fri Mar 15 10:42:09 2019 (-0400)
-;; Version: 2.0.0
-;; Last-Updated: Mon Aug  3 08:57:41 2020 (+0800)
-;;           By: fqye
+;; Version: 3.0
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d lsp
 ;; Compatibility: emacs-version >= 26.1
@@ -36,9 +34,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;;; Code:
-
-(eval-when-compile
-  (require 'init-const))
 
 ;; LSPPac
 (use-package lsp-mode
@@ -83,7 +78,7 @@
   (lsp-ui-sideline-show-code-actions nil)
   :config
   ;; Use lsp-ui-doc-webkit only in GUI
-  (if *sys/gui*
+  (if (display-graphic-p)
       (setq lsp-ui-doc-use-webkit t))
   ;; WORKAROUND Hide mode-line of the lsp-ui-imenu buffer
   ;; https://github.com/emacs-lsp/lsp-ui/issues/243

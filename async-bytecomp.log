@@ -1,0 +1,3 @@
+
+In treemacs-show-extensions:
+treemacs-interface.el:977:27: Warning: reference to free variable ‘name’

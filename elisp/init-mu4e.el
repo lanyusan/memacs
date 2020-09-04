@@ -5,10 +5,7 @@
 ;; Author: Mingde (Matthew) Zeng
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
 ;; Created: Mon Dec  2 15:17:14 2019 (-0500)
-;; Version: 2.0.0
-;; Package-Requires: (mu4e)
-;; Last-Updated:
-;;           By:
+;; Version: 3.0
 ;; URL: https://github.com/MatthewZMD/.emacs.d
 ;; Keywords: M-EMACS .emacs.d mu mu4e
 ;; Compatibility: emacs-version >= 26.1
@@ -54,6 +51,7 @@
   (use-package mu4e-overview :defer t)
   :bind
   (("M-z m" . mu4e)
+   ("M-m m" . mu4e)
    (:map mu4e-view-mode-map
          ("e" . mu4e-view-save-attachment)))
   :custom
@@ -132,37 +130,7 @@
                                               ("/gmail/[email].Trash"       . ?t)
                                               ("/gmail/[email].All Mail"  . ?a)
                                               ("/gmail/[email].Starred"   . ?r)
-                                              ("/gmail/[email].Drafts"    . ?d)))))))
-  (defun mu4e-action-find-in-mailing-list (msg)
-    "Find message in mailing-list archives"
-    (interactive)
-    (let* ((mlist (mu4e-message-field msg :mailing-list))
-           (msg-id (mu4e-message-field msg :message-id))
-           (url
-            (pcase mlist
-              ;; gnu.org
-              ((pred (lambda (x) (string-suffix-p "gnu.org" x)))
-               (concat
-                "https://lists.gnu.org/archive/cgi-bin/namazu.cgi?query="
-                (concat
-                 (url-hexify-string
-                  (concat
-                   "+message-id:<"
-                   msg-id
-                   ">"))
-                 "&submit=" (url-hexify-string "Search!")
-                 "&idxname="
-                 (replace-regexp-in-string "\.gnu\.org" "" mlist))))
-              ;; google.groups
-              ((pred (lambda (x) (string-suffix-p "googlegroups.com" x)))
-               (concat
-                "https://groups.google.com/forum/#!topicsearchin/"
-                (replace-regexp-in-string "\.googlegroups\.com" "" mlist)
-                "/messageid$3A"
-                (url-hexify-string (concat "\"" msg-id "\"")))))))
-      (browse-url url)))
-  (add-to-list 'mu4e-view-actions '("find in mailing-list" . mu4e-action-find-in-mailing-list))
-  (add-to-list 'mu4e-headers-actions '("find in mailing-list" . mu4e-action-find-in-mailing-list)))
+                                              ("/gmail/[email].Drafts"    . ?d))))))))
 ;; -Mu4ePac
 
 (provide 'init-mu4e)
