@@ -223,7 +223,10 @@ If you experience freezing, decrease this.  If you experience stuttering, increa
 
 (require 'init-input-method)
 
-;; (require 'init-epaint)
+(require 'init-debbugs)
+
+(require 'init-epaint)
+
 
 ;; (require 'init-games)
 

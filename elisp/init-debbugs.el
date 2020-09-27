@@ -1,20 +1,21 @@
-;;; init-python.el --- -*- lexical-binding: t -*-
+;;; init-debbugs.el --- -*- lexical-binding: t -*-
 ;;
-;; Filename: init-python.el
-;; Description: Initialize Python
+;; Filename: init-debbugs.el
+;; Description: Configure debbugs
 ;; Author: Mingde (Matthew) Zeng
 ;; Copyright (C) 2019 Mingde (Matthew) Zeng
-;; Created: Mon Jun 10 18:58:02 2019 (-0400)
-;; Version: 3.0
-;; URL: https://github.com/MatthewZMD/.emacs.d
-;; Keywords: lsp python pyright
-;; Compatibility: emacs-version >= 26.1
+;; Created: Sat Sep 12 18:27:12 2020 (-0400)
+;; Version: 3.0.0
+;; URL:
+;; Doc URL:
+;; Keywords:
+;; Compatibility:
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;;; Commentary:
 ;;
-;; This initializes lsp-python-ms
+;; This initializes debbugs
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -35,28 +36,11 @@
 ;;
 ;;; Code:
 
-(eval-when-compile
-  (require 'init-flycheck)
-  (require 'init-const))
+;; DebbugsPac
+(use-package debbugs
+  :commands (debbugs-gnu))
+;; -DebbugsPac
 
-;; PythonConfig
-(use-package python-mode
-  :ensure nil
-  :after flycheck
-  :mode "\\.py\\'"
-  :custom
-  (python-indent-offset 4)
-  (flycheck-python-pycompile-executable "python3")
-  (python-shell-interpreter "python3"))
-;; -PythonConfig
-
-;; LSPPythonPac
-(use-package lsp-pyright
-  :hook (python-mode . (lambda () (require 'lsp-pyright)))
-  :init (when (executable-find "python3")
-          (setq lsp-pyright-python-executable-cmd "python3")))
-;; -LSPPythonPac
-
-(provide 'init-python)
+(provide 'init-debbugs)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; init-python.el ends here
+;;; init-debbugs.el ends here
